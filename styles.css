@@ -1,0 +1,25 @@
+@font-face {
+    font-family: 'Oswald';
+    src: url('./assets/fonts/Oswald-VariableFont_wght.ttf');
+}
+:root{
+    --font-body: 'Oswald', sans-serif;
+    --red: #B32A32;
+    --blue: #3F56F3;
+    --yellow: #F0A632;
+    --green: #2D9415;
+    --white: #f5f5f5;
+    --beige: #D9CAAD;
+    --black: #000103;
+
+    --background-color: var(--white);
+    --foreground-color: var(--black);
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--background-color);
+    color: var(--foreground-color);
+    margin: 0;
+    padding: 0;
+}
