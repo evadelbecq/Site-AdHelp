@@ -13,8 +13,10 @@
 
 :root{
     --font-body: 'Oswald', sans-serif;
-    --red: #B32A32;
-    --blue: #3F56F3;
+    --red: #A03635;
+    --light-red: #D5A29A;
+    --blue: #3B6BDE;
+    --light-blue: #4F97E8;
     --yellow: #F0A632;
     --green: #2D9415;
     --white: #f5f5f5;
@@ -24,13 +26,33 @@
     --background-color: var(--white);
     --foreground-color: var(--black);
 }
-
+html{
+    scroll-behavior: smooth;
+}
 body {
     font-family: var(--font-body);
     background-color: var(--background-color);
     color: var(--foreground-color);
     margin: 0;
-    padding: 0;
+}
+header {
+    padding: 50px 0;
+    background: url(./assets/images/bg_deco.png) no-repeat center top/cover;
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    background-color: var(--beige) ;
+}
+header h1 {
+    font-size: 10rem;
+    color: var(--white);
+    filter: drop-shadow(6px 10px 4px rgba(0, 0, 0, 0.9));
+    text-align: center;
+    margin: 0;
+}
+header p {
+    text-align: center;
+    max-width: 50%;
 }
 
 .button {
@@ -45,10 +67,12 @@ body {
     cursor: pointer;
 
     img {
+        opacity: 1;
         z-index: 10;
         width: 50px;
         transform: rotate(-15deg) translate(25px, 5px);
         transition: all 0.2s ease-in-out;
+        filter: drop-shadow(0px 0px rgba(255, 255, 255, 1));
     }
 
     :is(button, a) {
@@ -79,13 +103,25 @@ body {
             transform: scale(1.05);
             color: var(--_button-hover-font-color);
             background-color: var(--_button-hover-background-color);
+            box-shadow: var(--black) 4px 4px ;
         }
     }
 }
 
+.hero-buttons{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.button.red {
+    --button-background-color: var(--light-red);
+    --button-hover-background-color: var(--red);
+    --button-hover-font-color: var(--white);
+}
 .button.blue {
-    --button-background-color: var(--blue);
-    --button-hover-background-color: var(--yellow);
-    --button-font-color: var(--white);
-    --button-hover-font-color: var(--black);
+    --button-background-color: var(--light-blue);
+    --button-hover-background-color: var(--blue);
+    --button-hover-font-color: var(--white);
 }
