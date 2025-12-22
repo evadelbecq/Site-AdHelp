@@ -4,8 +4,10 @@
 }
 :root{
     --font-body: 'Oswald', sans-serif;
-    --red: #B32A32;
-    --blue: #3F56F3;
+    --red: #A03635;
+    --light-red: #D5A29A;
+    --blue: #3B6BDE;
+    --light-blue: #4F97E8;
     --yellow: #F0A632;
     --green: #2D9415;
     --white: #f5f5f5;
@@ -15,33 +17,60 @@
     --background-color: var(--white);
     --foreground-color: var(--black);
 }
-
+html{
+    scroll-behavior: smooth;
+}
 body {
     font-family: var(--font-body);
     background-color: var(--background-color);
     color: var(--foreground-color);
     margin: 0;
-    padding: 0;
+}
+header {
+    padding: 50px 0;
+    background: url(./assets/images/bg_deco.png) no-repeat center top/cover;
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    background-color: var(--beige) ;
+}
+header h1 {
+    font-size: 10rem;
+    color: var(--white);
+    filter: drop-shadow(6px 10px 4px rgba(0, 0, 0, 0.9));
+    text-align: center;
+    margin: 0;
+}
+header p {
+    text-align: center;
+    max-width: 50%;
 }
 .button {
     width: fit-content;
     display: flex;
     align-items: center;
     cursor: pointer;
+    text-decoration: none;
     &:hover img{
         transform: rotate(-10deg) translate(25px, 5px) scale(1.1);
         transition: transform 0.2s;
     }
     &:hover button {
-        /* background-color: var(--yellow);
-        color: var(--white); */
+        color: var(--white);
         transform: scale(1.05);
+        box-shadow: var(--black) 4px 4px ;
+    }
+
+    &.blue:hover button {
+        background-color: var(--blue);
+    }
+    &.red:hover button {
+        background-color: var(--red);
     }
 }
 .button button{
     height: 45px;
     width: 145px;
-    background-color: var(--beige);
     cursor: pointer;
     border: var(--black);
     padding: 10px 20px;
@@ -52,8 +81,23 @@ body {
 }
 
 .button img{
+    opacity: 1;
     z-index: 10;
     width: 50px;
     transform: rotate(-15deg) translate(25px, 5px);
+    filter: drop-shadow(0px 0px rgba(255, 255, 255, 1));
+
     transition: all 0.2s ease-in-out;
+}
+.hero-buttons{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+.red button {
+    background-color: var(--light-red);
+}
+.blue button {
+    background-color: var(--light-blue);
 }
