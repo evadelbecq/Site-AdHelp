@@ -1,7 +1,16 @@
+
+/* RESET */
+*,
+::before,
+::after {
+    box-sizing: border-box;
+}
+
 @font-face {
     font-family: 'Oswald';
     src: url('./assets/fonts/Oswald-VariableFont_wght.ttf');
 }
+
 :root{
     --font-body: 'Oswald', sans-serif;
     --red: #B32A32;
@@ -23,37 +32,46 @@ body {
     margin: 0;
     padding: 0;
 }
+
 .button {
     width: fit-content;
     display: flex;
     align-items: center;
     cursor: pointer;
-    &:hover img{
-        transform: rotate(-10deg) translate(25px, 5px) scale(1.1);
-        transition: transform 0.2s;
-    }
-    &:hover button {
-        /* background-color: var(--yellow);
-        color: var(--white); */
-        transform: scale(1.05);
-    }
-}
-.button button{
-    height: 45px;
-    width: 145px;
-    background-color: var(--beige);
-    cursor: pointer;
-    border: var(--black);
-    padding: 10px 20px;
-    font: var(--font-body);
-    font-weight: 600;
-    border-radius: 5px;
-    transition: all 0.2s ease-in-out;
-}
 
-.button img{
-    z-index: 10;
-    width: 50px;
-    transform: rotate(-15deg) translate(25px, 5px);
-    transition: all 0.2s ease-in-out;
+    img {
+        z-index: 10;
+        width: 50px;
+        transform: rotate(-15deg) translate(25px, 5px);
+        transition: all 0.2s ease-in-out;
+    }
+
+    :is(button, a) {
+        height: 45px;
+        width: 145px;
+        background-color: var(--beige);
+        cursor: pointer;
+        border: var(--black);
+        padding: 10px 20px;
+        font: var(--font-body);
+        font-weight: 600;
+        color: currentColor;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: all 0.2s ease-in-out;
+    }
+
+    &:hover {
+        img {
+            transform: rotate(-10deg) translate(25px, 5px) scale(1.1);
+            transition: transform 0.2s;
+        }
+
+        :is(button, a) {
+            /* background-color: var(--yellow);
+            color: var(--white); */
+            transform: scale(1.05);
+        }
+    }
 }
