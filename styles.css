@@ -94,11 +94,11 @@ h2 {
 
     :is(button, a) {
         height: 45px;
-        width: 145px;
+        min-width: 145px;
         background-color: var(--_button-background-color);
         cursor: pointer;
         border: var(--black);
-        padding: 10px 20px;
+        padding: 10px 35px;
         font: var(--font-body);
         font-weight: 600;
         color: var(--_button-font-color);;
@@ -141,4 +141,8 @@ h2 {
     --button-background-color: var(--light-blue);
     --button-hover-background-color: var(--blue);
     --button-hover-font-color: var(--white);
+}
+
+section#feedback {
+    background-color: #dbecfa;
 }
