@@ -34,6 +34,11 @@ body {
 }
 
 .button {
+    --_button-background-color: var(--button-background-color, var(--beige));
+    --_button-font-color: var(--button-font-color, var(--black));
+    --_button-hover-background-color: var(--button-hover-background-color, var(--_button-background-color));
+    --_button-hover-font-color: var(--button-hover-font-color, var(--_button-font-color));
+
     width: fit-content;
     display: flex;
     align-items: center;
@@ -49,13 +54,13 @@ body {
     :is(button, a) {
         height: 45px;
         width: 145px;
-        background-color: var(--beige);
+        background-color: var(--_button-background-color);
         cursor: pointer;
         border: var(--black);
         padding: 10px 20px;
         font: var(--font-body);
         font-weight: 600;
-        color: currentColor;
+        color: var(--_button-font-color);;
         text-align: center;
         text-decoration: none;
         border-radius: 5px;
@@ -72,6 +77,15 @@ body {
             /* background-color: var(--yellow);
             color: var(--white); */
             transform: scale(1.05);
+            color: var(--_button-hover-font-color);
+            background-color: var(--_button-hover-background-color);
         }
     }
+}
+
+.button.blue {
+    --button-background-color: var(--blue);
+    --button-hover-background-color: var(--yellow);
+    --button-font-color: var(--white);
+    --button-hover-font-color: var(--black);
 }
