@@ -4,6 +4,8 @@
 ::before,
 ::after {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 @font-face {
@@ -53,6 +55,21 @@ header h1 {
 header p {
     text-align: center;
     max-width: 50%;
+}
+
+section {
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+    padding-block: 40px;
+    padding-inline: max(2rem, min(5rem, 10%));
+    text-align: center;
+}
+
+h2 {
+    font-size: 2.5rem;
 }
 
 .button {
