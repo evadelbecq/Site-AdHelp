@@ -22,6 +22,7 @@
     --yellow: #F0A632;
     --green: #2D9415;
     --white: #f5f5f5;
+    --light-beige: #f4ecde;
     --beige: #D9CAAD;
     --black: #000103;
 
@@ -145,4 +146,8 @@ h2 {
 
 section#feedback {
     background-color: #dbecfa;
+}
+
+section#whatsnext {
+    background-color: var(--light-beige);
 }
