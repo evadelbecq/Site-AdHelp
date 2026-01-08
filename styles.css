@@ -16,7 +16,7 @@
 :root{
     --font-body: 'Oswald', sans-serif;
     --red: #A03635;
-    --light-red: #D5A29A;
+    --light-red: #c35c5a;
     --blue: #3B6BDE;
     --light-blue: #4F97E8;
     --yellow: #F0A632;
@@ -65,7 +65,7 @@ section {
     align-items: center;
     gap: 1rem;
     padding-block: 40px;
-    padding-inline: max(2rem, min(5rem, 10%));
+    padding-inline: max(2rem, min(20rem, 15%));
     text-align: center;
 }
 
@@ -142,6 +142,44 @@ h2 {
     --button-background-color: var(--light-blue);
     --button-hover-background-color: var(--blue);
     --button-hover-font-color: var(--white);
+}
+
+section#jouer {
+    background-color: #e5c9c5;
+
+    .test {
+        font-size: 4rem;
+    }
+
+    .pictograms {
+        display: flex;
+        flex-flow: row;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .pictogram {
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        height: 75px;
+        aspect-ratio: 1;
+        border: 2px solid black;
+        border-radius: 10%;
+        background-color: white;
+
+        img {
+            height: 35px;
+            margin-bottom: -2px;
+        }
+
+        span {
+            font-size: 1em;
+            font-weight: bold;
+        }
+    }
 }
 
 section#feedback {
