@@ -28,11 +28,47 @@
 
         </section>
         <section class="Jouer" id="jouer">
+            <div class="background" inert>
+                <script>
+                    const names = ['accessibilité', 'administration', 'amour', 'changement', 'estime', 'finances', 'presence', 'refuge', 'représentation', 'respect', 'réconfort', 'temps', 'écoute'];
+                    const jouer = document.querySelector('#jouer');
+                    const background = document.querySelector('#jouer .background');
+
+                    for (let name of names) {
+                        const img = document.createElement('img');
+                        img.src = `assets/images/RAW/${name}.png`;
+                        img.style.setProperty('--x', Math.random());
+                        img.style.setProperty('--y', Math.random());
+                        img.style.setProperty('--z', Math.random());
+                        img.style.setProperty('--rx', Math.random());
+                        img.style.setProperty('--ry', Math.random());
+                        img.style.setProperty('--rz', Math.random());
+                        background.appendChild(img);
+                    }
+
+                    document.addEventListener('mousemove', event => {
+                        const mouseX = (event.clientX / window.innerWidth) * 2 - 1;
+                        const mouseY = (event.clientY / window.innerHeight) * 2 - 1;
+                        background.style.setProperty('--mouseX', mouseX);
+                        background.style.setProperty('--mouseY', mouseY);
+                    });
+                </script>
+            </div>
+
             <h2>Jouer</h2>
 
-            <p>
-                Ad'help est un jeu coopératif où vous unissez vos forces pour aider des personnes trans à construire leur parcours et à faire face à diverses situations. Chaque joueur·se accompagne une personne représentée par une carte "Situation" qui liste les éléments dont elle a besoin. Ensemble, votre objectif est de valider le plus grand nombre de situations possibles.
-            </p>
+            <div class="rules">
+                <p>
+                    Ad'help est un jeu coopératif où vous unissez vos forces pour aider des personnes trans à construire leur parcours et à faire face à diverses situations. Chaque joueur·se accompagne une personne représentée par une carte "Situation" qui liste les éléments dont elle a besoin. Ensemble, votre objectif est de valider le plus grand nombre de situations possibles.
+                </p>
+
+                <img
+                    class="situations"
+                    src="assets/images/situations.png"
+                    alt="Cartes de situations: J'adore ce style vestimentaire ! Quoi... sur moi ? Non... ça ne m'irait pas !"
+                    width="300"
+                />
+            </div>
 
             <div class="pictograms">
                 <div
@@ -70,6 +106,10 @@
                     <span>20min</span>
                 </div>
             </div>
+
+            <p>
+                Le jeu est actuellement disponible en version téléchargeable à imprimer chez soi.
+            </p>
 
             <div class="button red">
                 <img src="./assets/images/teddy.png" alt="Ourson en peluche"/>

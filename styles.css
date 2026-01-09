@@ -145,10 +145,68 @@ h2 {
 }
 
 section#jouer {
-    background-color: #e5c9c5;
+    position: relative;
+    color: white;
 
-    .test {
-        font-size: 4rem;
+    .background {
+        position: absolute;
+        inset: 0;
+        perspective: 200;
+        perspective-origin: center;
+        overflow: clip;
+        z-index: -1;
+        background-color: #e5c9c5;
+        filter: brightness(0.8) grayscale(0.2) contrast(1.1) blur(1px);
+
+        &::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-color: var(--light-red);
+            opacity: 0.3;
+        }
+
+        img {
+            position: absolute;
+            width: 200px;
+            left: calc(var(--x) * 100%);
+            top: calc(var(--y) * 100%);
+            transform:
+                translate(-50%, -50%)
+                translateZ(calc(var(--z) * 100px))
+                scale(calc(1.5 - var(--z)))
+                translate(
+                    calc(var(--mouseX, 0) * (1 - var(--z)) * 50px),
+                    calc(var(--mouseY, 0) * (1 - var(--z)) * 50px)
+                )
+                rotateZ(calc(var(--rz) * 360deg))
+                rotateY(calc(var(--ry) * 40deg))
+                rotateX(calc(var(--rx) * 40deg))
+                ;
+            z-index: calc(var(--z) * -100000000);
+            filter:
+                brightness(0.8) grayscale(0.2)
+                blur(calc(pow((var(--z) - 0.5) * 2, 2) * 5px));
+        }
+    }
+
+    .rules {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 20px;
+
+        p {
+            flex: 1 1 auto;
+            max-width: 500px;
+        }
+
+        img {
+            flex: 0 1 auto;
+            min-width: 0;
+            max-width: 100%;
+        }
     }
 
     .pictograms {
@@ -169,6 +227,7 @@ section#jouer {
         border: 2px solid black;
         border-radius: 10%;
         background-color: white;
+        color: black;
 
         img {
             height: 35px;
