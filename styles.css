@@ -107,7 +107,7 @@ h2 {
     }
 
     :is(button, a) {
-        height: 45px;
+        min-height: 45px;
         min-width: 145px;
         background-color: var(--_button-background-color);
         cursor: pointer;
