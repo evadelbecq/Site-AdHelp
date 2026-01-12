@@ -24,37 +24,12 @@
             </div>
 
         </header>
+
         <section class="Histoire" >
 
         </section>
+
         <section class="Jouer" id="jouer">
-            <!-- <div class="background-1" inert>
-                <script>
-                    const names = ['accessibilité', 'administration', 'amour', 'changement', 'estime', 'finances', 'presence', 'refuge', 'représentation', 'respect', 'réconfort', 'temps', 'écoute'];
-                    const jouer = document.querySelector('#jouer');
-                    const background = document.querySelector('#jouer .background');
-
-                    for (let name of names) {
-                        const img = document.createElement('img');
-                        img.src = `assets/images/RAW/${name}.png`;
-                        img.style.setProperty('--x', Math.random());
-                        img.style.setProperty('--y', Math.random());
-                        img.style.setProperty('--z', Math.random());
-                        img.style.setProperty('--rx', Math.random());
-                        img.style.setProperty('--ry', Math.random());
-                        img.style.setProperty('--rz', Math.random());
-                        background.appendChild(img);
-                    }
-
-                    document.addEventListener('mousemove', event => {
-                        const mouseX = (event.clientX / window.innerWidth) * 2 - 1;
-                        const mouseY = (event.clientY / window.innerHeight) * 2 - 1;
-                        background.style.setProperty('--mouseX', mouseX);
-                        background.style.setProperty('--mouseY', mouseY);
-                    });
-                </script>
-            </div> -->
-
             <div class="background-2">
                 <div class="cards"></div>
             </div>
@@ -86,7 +61,6 @@
                     <span>2-5</span>
                 </div>
 
-
                 <div
                     class="pictogram"
                     title="Pas de limite d'age"
@@ -97,7 +71,6 @@
                     />
                     <span>0+</span>
                 </div>
-
 
                 <div
                     class="pictogram"
@@ -120,12 +93,41 @@
                 <a href="#jouer">Télécharger</a>
             </div>
         </section>
+
         <section class="Feedback" id="feedback">
+            <div class="background-3" inert>
+                <script>
+                    {
+                        const names = ['amour', 'estime', 'presence', 'respect', 'réconfort', 'écoute'];
+                        const jouer = document.querySelector('#feedback');
+                        const background = document.querySelector('#feedback .background-3');
+
+                        const excludeCenter = number => number < 0.5
+                            ? number / 2
+                            : 0.5 + (number) / 2;
+
+                        for (let name of names) {
+                            const img = document.createElement('img');
+                            img.src = `assets/images/RAW/${name}-icon.png`;
+                            img.style.setProperty('--x', excludeCenter(Math.random()));
+                            img.style.setProperty('--y', excludeCenter(Math.random()));
+                            img.style.setProperty('--rz', Math.random());
+                            background.appendChild(img);
+                        }
+                    }
+                </script>
+            </div>
+
             <h2>Feedback</h2>
             <p>
-                Vous jouez à Ad’help ?
+                Vous jouez régulièrement à Ad’help ?
                 <br />
-                Alors devenez un·e contributeur·se en nous faisant un retour !
+                Vous testez le jeu pour la première fois ?
+                <br />
+                Vous avez des remarques ou des idées à partager ?
+                <br />
+                <br />
+                Alors donnez vos impressions en nous faisant un retour !
             </p>
 
             <div class="button blue">
@@ -133,7 +135,40 @@
                 <a href="#">Donner son Feedback</a>
             </div>
         </section>
+
         <section class="WhatsNext" id="whatsnext">
+            <div class="background-1" inert>
+                <script>
+                    {
+                        const names = ['accessibilité', 'administration', 'amour', 'changement', 'estime', 'finances', 'presence', 'refuge', 'représentation', 'respect', 'réconfort', 'temps', 'écoute'];
+                        const background = document.querySelector('#whatsnext .background-1');
+
+                        const excludeCenter = number => number < 0.5
+                            ? number / 2
+                            : 0.5 + (number) / 2;
+
+                        for (let name of names) {
+                            const img = document.createElement('img');
+                            img.src = `assets/images/RAW/${name}.png`;
+                            img.style.setProperty('--x', excludeCenter(Math.random()));
+                            img.style.setProperty('--y', excludeCenter(Math.random()));
+                            img.style.setProperty('--z', Math.random());
+                            img.style.setProperty('--rx', Math.random());
+                            img.style.setProperty('--ry', Math.random());
+                            img.style.setProperty('--rz', Math.random());
+                            background.appendChild(img);
+                        }
+
+                        document.addEventListener('mousemove', event => {
+                            const mouseX = (event.clientX / window.innerWidth) * 2 - 1;
+                            const mouseY = (event.clientY / window.innerHeight) * 2 - 1;
+                            background.style.setProperty('--mouseX', mouseX);
+                            background.style.setProperty('--mouseY', mouseY);
+                        });
+                    }
+                </script>
+            </div>
+
             <h2>La suite</h2>
 
             <p>Lorem ipsum dolor sit amet... 👀</p>

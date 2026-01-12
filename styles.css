@@ -59,6 +59,7 @@ header p {
 }
 
 section {
+    position: relative;
     display: flex;
     flex-flow: column;
     justify-content: flex-start;
@@ -144,93 +145,8 @@ h2 {
     --button-hover-font-color: var(--white);
 }
 
-@keyframes play-background {
-    from {
-        background-position-x: 0px, 400px;
-    }
-    to {
-        background-position-x: var(--background-width), calc(400px - var(--background-width));
-    }
-}
-
 section#jouer {
-    position: relative;
     color: white;
-
-    .background-1 {
-        position: absolute;
-        inset: 0;
-        perspective: 200;
-        perspective-origin: center;
-        overflow: clip;
-        z-index: -1;
-        background-color: #e5c9c5;
-        filter: brightness(0.8) grayscale(0.2) contrast(1.1) blur(1px);
-
-        &::after {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background-color: var(--light-red);
-            opacity: 0.3;
-        }
-
-        img {
-            position: absolute;
-            width: 200px;
-            left: calc(var(--x) * 100%);
-            top: calc(var(--y) * 100%);
-            transform:
-                translate(-50%, -50%)
-                translateZ(calc(var(--z) * 100px))
-                scale(calc(1.5 - var(--z)))
-                translate(
-                    calc(var(--mouseX, 0) * (1 - var(--z)) * 50px),
-                    calc(var(--mouseY, 0) * (1 - var(--z)) * 50px)
-                )
-                rotateZ(calc(var(--rz) * 360deg))
-                rotateY(calc(var(--ry) * 40deg))
-                rotateX(calc(var(--rx) * 40deg))
-                ;
-            z-index: calc(var(--z) * -100000000);
-            filter:
-                brightness(0.8) grayscale(0.2)
-                blur(calc(pow((var(--z) - 0.5) * 2, 2) * 5px));
-        }
-    }
-
-    .background-2 {
-        --background-ratio: 10.932344428;
-        --background-height: 250px;
-        --background-width: calc(var(--background-height) * var(--background-ratio));
-        position: absolute;
-        inset: 0;
-        overflow: clip;
-        z-index: -1;
-        /* background-color: var(--blue); */
-
-        .cards {
-            position: absolute;
-            inset: 0;
-            background-image:
-                url('assets/images/resources_2_xs.png'),
-                url('assets/images/resources_2_xs_flipped.png');
-            background-size: auto var(--background-height);
-            background-position-y: 0px, calc(var(--background-height) / 2);
-            animation: play-background infinite 180s linear;
-            transform: rotateZ(-2deg) scale(1.1);
-            filter: brightness(0.9) contrast(1.4);
-        }
-
-        &::after {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background-color: var(--blue);
-            opacity: 0.86;
-        }
-
-    }
 
     .rules {
         display: flex;
@@ -284,9 +200,118 @@ section#jouer {
 }
 
 section#feedback {
-    background-color: #dbecfa;
 }
 
-section#whatsnext {
+.background-1 {
+    position: absolute;
+    inset: 0;
+    perspective: 200;
+    perspective-origin: center;
+    overflow: clip;
+    z-index: -1;
+    /* background-color: #e5c9c5; */
     background-color: var(--light-beige);
+    filter: brightness(0.8) grayscale(0.1) contrast(1.1) blur(1px);
+
+    &::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background-color: var(--light-beige);
+        opacity: 0.2;
+    }
+
+    img {
+        position: absolute;
+        width: 200px;
+        left: calc(var(--x) * 100%);
+        top: calc(var(--y) * 100%);
+        transform:
+            translate(-50%, -50%)
+            translateZ(calc(var(--z) * 100px))
+            scale(calc(1.5 - var(--z)))
+            translate(
+                calc(var(--mouseX, 0) * (1 - var(--z)) * 50px),
+                calc(var(--mouseY, 0) * (1 - var(--z)) * 50px)
+            )
+            rotateZ(calc(var(--rz) * 360deg))
+            rotateY(calc(var(--ry) * 40deg))
+            rotateX(calc(var(--rx) * 40deg))
+            ;
+        z-index: calc(var(--z) * -100000000);
+        filter:
+            brightness(0.8) grayscale(0.2)
+            blur(calc(pow((var(--z) - 0.5) * 2, 2) * 5px));
+    }
+}
+
+
+@keyframes play-background-2 {
+    from {
+        background-position-x: 0px, 400px;
+    }
+    to {
+        background-position-x: var(--background-width), calc(400px - var(--background-width));
+    }
+}
+
+.background-2 {
+    --background-ratio: 10.932344428;
+    --background-height: 250px;
+    --background-width: calc(var(--background-height) * var(--background-ratio));
+    position: absolute;
+    inset: 0;
+    overflow: clip;
+    z-index: -1;
+    /* background-color: var(--blue); */
+
+    .cards {
+        position: absolute;
+        inset: 0;
+        background-image:
+            url('assets/images/resources_2_xs.png'),
+            url('assets/images/resources_2_xs_flipped.png');
+        background-size: auto var(--background-height);
+        background-position-y: 0px, calc(var(--background-height) / 2);
+        animation: play-background-2 infinite 180s linear;
+        transform: rotateZ(-2deg) scale(1.1);
+        filter: brightness(0.9) contrast(1.4);
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background-color: var(--blue);
+        opacity: 0.86;
+    }
+}
+
+
+.background-3 {
+    position: absolute;
+    inset: 0;
+    overflow: clip;
+    z-index: -1;
+    /* background-color: #dbecfa; */
+
+    &::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        /* background-color: #e5c9c5; */
+        opacity: 0.3;
+    }
+
+    img {
+        position: absolute;
+        width: 80px;
+        left: calc(var(--x) * 100%);
+        top: calc(var(--y) * 100%);
+        transform:
+            translate(-50%, -50%)
+            rotateZ(calc(var(--rz) * 360deg))
+            ;
+        /* filter: brightness(0.8) grayscale(0.2) */
+    }
 }
