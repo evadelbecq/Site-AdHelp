@@ -212,6 +212,12 @@ section#jouer {
 }
 
 section#feedback {
+    overflow: clip;
+    --background-color: #e2ecf7;
+
+    & > * {
+        background-color: var(--background-color);
+    }
 }
 
 .background-1 {
@@ -305,25 +311,17 @@ section#feedback {
     inset: 0;
     overflow: clip;
     z-index: -1;
-    /* background-color: #dbecfa; */
+    background-color: var(--background-color);
+    background-image: url('assets/images/background-3.png');
+    background-repeat: repeat;
+    background-size: 300px;
+    transform: rotate(-5deg) scale(1.4);
 
     &::after {
         content: '';
         position: absolute;
         inset: 0;
-        /* background-color: #e5c9c5; */
-        opacity: 0.3;
-    }
-
-    img {
-        position: absolute;
-        width: 80px;
-        left: calc(var(--x) * 100%);
-        top: calc(var(--y) * 100%);
-        transform:
-            translate(-50%, -50%)
-            rotateZ(calc(var(--rz) * 360deg))
-            ;
-        /* filter: brightness(0.8) grayscale(0.2) */
+        background-color: var(--background-color);
+        opacity: 0.7;
     }
 }

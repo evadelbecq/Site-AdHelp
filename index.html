@@ -96,26 +96,6 @@
 
         <section class="Feedback" id="feedback">
             <div class="background-3" inert>
-                <script>
-                    {
-                        const names = ['amour', 'estime', 'presence', 'respect', 'réconfort', 'écoute'];
-                        const jouer = document.querySelector('#feedback');
-                        const background = document.querySelector('#feedback .background-3');
-
-                        const excludeCenter = number => number < 0.5
-                            ? number / 2
-                            : 0.5 + (number) / 2;
-
-                        for (let name of names) {
-                            const img = document.createElement('img');
-                            img.src = `assets/images/RAW/${name}-icon.png`;
-                            img.style.setProperty('--x', excludeCenter(Math.random()));
-                            img.style.setProperty('--y', excludeCenter(Math.random()));
-                            img.style.setProperty('--rz', Math.random());
-                            background.appendChild(img);
-                        }
-                    }
-                </script>
             </div>
 
             <h2>Feedback</h2>
