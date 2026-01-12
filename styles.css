@@ -13,8 +13,15 @@
     src: url('./assets/fonts/Oswald-VariableFont_wght.ttf');
 }
 
+@font-face {
+    font-family: 'Tunnel';
+    src: url('./assets/fonts/Funnel_Sans/FunnelSans-VariableFont_wght.ttf');
+    size-adjust: 110%;
+}
+
 :root{
-    --font-body: 'Oswald', sans-serif;
+    --font-title: 'Oswald', sans-serif;
+    --font-text: 'Tunnel', sans-serif;
     --red: #A03635;
     --light-red: #c35c5a;
     --blue: #3B6BDE;
@@ -33,11 +40,16 @@ html{
     scroll-behavior: smooth;
 }
 body {
-    font-family: var(--font-body);
+    font-family: var(--font-text);
     background-color: var(--background-color);
     color: var(--foreground-color);
     margin: 0;
 }
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-title);
+}
+
 header {
     padding: 50px 0;
     background: url(./assets/images/bg_deco.png) no-repeat center top/cover;
@@ -101,7 +113,7 @@ h2 {
         cursor: pointer;
         border: var(--black);
         padding: 10px 35px;
-        font: var(--font-body);
+        font-family: var(--font-title);
         font-weight: 600;
         color: var(--_button-font-color);;
         text-align: center;
