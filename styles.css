@@ -30,7 +30,7 @@
     --green: #2D9415;
     --white: #f5f5f5;
     --light-beige: #f4ecde;
-    --beige: #D9CAAD;
+    --beige: #eddab9;
     --black: #000103;
 
     --background-color: var(--white);
@@ -227,15 +227,14 @@ section#feedback {
     perspective-origin: center;
     overflow: clip;
     z-index: -1;
-    /* background-color: #e5c9c5; */
-    background-color: var(--light-beige);
-    filter: brightness(0.8) grayscale(0.1) contrast(1.1) blur(1px);
+    background-color: var(--beige);
+    filter: blur(1px);
 
     &::after {
         content: '';
         position: absolute;
         inset: 0;
-        background-color: var(--light-beige);
+        background-color: var(--beige);
         opacity: 0.2;
     }
 
@@ -258,7 +257,7 @@ section#feedback {
             ;
         z-index: calc(var(--z) * -100000000);
         filter:
-            brightness(0.8) grayscale(0.2)
+            brightness(0.7) grayscale(0.1) contrast(1.1)
             blur(calc(pow((var(--z) - 0.5) * 2, 2) * 5px));
     }
 }
