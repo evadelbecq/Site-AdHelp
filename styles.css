@@ -213,10 +213,14 @@ section#jouer {
 
 section#feedback {
     overflow: clip;
-    --background-color: #e2ecf7;
+    --background-color: #e6effd;
 
     & > * {
         background-color: var(--background-color);
+    }
+
+    p {
+        padding: 10px;
     }
 }
 
@@ -313,14 +317,14 @@ section#feedback {
     background-color: var(--background-color);
     background-image: url('assets/images/background-3.png');
     background-repeat: repeat;
-    background-size: 300px;
-    transform: rotate(-5deg) scale(1.4);
+    background-size: min(50dvw, 300px);
+    transform: rotate(-6deg) scale(1.4);
 
     &::after {
         content: '';
         position: absolute;
         inset: 0;
         background-color: var(--background-color);
-        opacity: 0.7;
+        opacity: 0.5;
     }
 }
