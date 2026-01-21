@@ -14,14 +14,14 @@
 }
 
 @font-face {
-    font-family: 'Tunnel';
-    src: url('./assets/fonts/Funnel_Sans/FunnelSans-VariableFont_wght.ttf');
+    font-family: 'Ubuntu';
+    src: url('./assets/fonts/Ubuntu/Ubuntu-Regular.ttf');
     size-adjust: 110%;
 }
 
 :root{
     --font-title: 'Oswald', sans-serif;
-    --font-text: 'Tunnel', sans-serif;
+    --font-text: 'Ubuntu', sans-serif;
     --red: #A03635;
     --light-red: #c35c5a;
     --blue: #3B6BDE;
