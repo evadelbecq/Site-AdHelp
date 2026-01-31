@@ -219,10 +219,20 @@ section#feedback {
 
     & > * {
         background-color: var(--background-color);
+        border-radius: 5px;
     }
 
     p {
         padding: 10px;
+    }
+}
+
+section#whatsnext {
+    overflow: clip;
+
+    & > * {
+        background-color: var(--beige);
+        border-radius: 5px;
     }
 }
 
@@ -246,7 +256,7 @@ section#feedback {
 
     img {
         position: absolute;
-        width: 120px;
+        width: min(120px, 20dvw);
         left: calc(var(--x) * 100%);
         top: calc(var(--y) * 100%);
         transform:
@@ -263,7 +273,8 @@ section#feedback {
             ;
         z-index: calc(var(--z) * -100000000);
         filter:
-            brightness(0.7) grayscale(0.1) contrast(1.1)
+            brightness(calc(0.7 + var(--z) * 0.3))
+            grayscale(calc(var(--z) * 0.5))
             blur(calc(pow((var(--z) - 0.5) * 2, 2) * 5px));
     }
 }
@@ -315,16 +326,22 @@ section#feedback {
     overflow: clip;
     z-index: -1;
     background-color: var(--background-color);
-    background-image: url('assets/images/background-3.png');
-    background-repeat: repeat;
-    background-size: min(50dvw, 300px);
-    transform: rotate(-6deg) scale(1.4);
+
+    &::before {
+        content: '';
+        position: absolute;
+        inset: -24rem;
+        background-image: url('assets/images/background-3.png');
+        background-repeat: repeat;
+        background-size: min(25dvw, 150px);
+        transform: rotate(-4deg) scale(1.4);
+    }
 
     &::after {
         content: '';
         position: absolute;
         inset: 0;
         background-color: var(--background-color);
-        opacity: 0.5;
+        opacity: 0.7;
     }
 }

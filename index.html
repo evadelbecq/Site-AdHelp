@@ -120,19 +120,32 @@
             <div class="background-1" inert>
                 <script>
                     {
-                        const names = ['accessibilité', 'administratif', 'amour', 'changement', 'estime', 'finances', 'soutien', 'refuge', 'représentation', 'respect', 'réconfort', 'temps', 'écoute'];
+                        const names = ['accessibilité', 'administratif', 'amour', 'changement', 'estime', 'finances', 'soutien', 'refuge', 'représentation', 'respect', 'réconfort', 'temps'];
                         const background = document.querySelector('#whatsnext .background-1');
 
                         const excludeCenter = number => number < 0.5
                             ? number / 2
                             : 0.5 + (number) / 2;
 
+                        const getCenterDistance = number => number < 0.5
+                            ? (number) * 2
+                            : (1 - number) * 2;
+
+                        const getZfromXY = (x, y) => {
+                            const dx = getCenterDistance(x);
+                            const dy = getCenterDistance(y);
+                            return dx + (dy / 2);
+                        }
+
                         for (let name of names) {
                             const img = document.createElement('img');
+                            const x = excludeCenter(Math.random());
+                            const y = excludeCenter(Math.random());
+                            const z = getZfromXY(x, y);
                             img.src = `assets/images/cartes/actions/${name}.png`;
-                            img.style.setProperty('--x', excludeCenter(Math.random()));
-                            img.style.setProperty('--y', excludeCenter(Math.random()));
-                            img.style.setProperty('--z', Math.random());
+                            img.style.setProperty('--x', x);
+                            img.style.setProperty('--y', y);
+                            img.style.setProperty('--z', z);
                             img.style.setProperty('--rx', Math.random());
                             img.style.setProperty('--ry', Math.random());
                             img.style.setProperty('--rz', Math.random());
