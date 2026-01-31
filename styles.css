@@ -8,6 +8,10 @@
     padding: 0;
 }
 
+a {
+    color: inherit;
+}
+
 @font-face {
     font-family: 'Oswald';
     src: url('./assets/fonts/Oswald-VariableFont_wght.ttf');
@@ -44,9 +48,10 @@ body {
     background-color: var(--background-color);
     color: var(--foreground-color);
     margin: 0;
+    line-height: 1.4;
 }
 
-h1, h2, h3, h4, h5, h6 {
+:is(h1, h2, h3, h4, h5, h6) {
     font-family: var(--font-title);
 }
 
