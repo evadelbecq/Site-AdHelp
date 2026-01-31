@@ -203,6 +203,10 @@ section#jouer {
             max-width: 500px;
         }
 
+        .rules-link {
+            font-style: italic;
+        }
+
         img {
             flex: 0 1 auto;
             min-width: 0;

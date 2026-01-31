@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="styles.css">
+  <title>AdHelp</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+  <style>
+    header a {
+      text-decoration: none;
+    }
+
+    section#rules {
+      align-items: stretch;
+      gap: 0;
+
+      text-align: justify;
+      padding-inline: max(2rem, max(100% - 90rem, 15%));
+      background-color: var(--blue);
+      color: var(--white);
+
+
+      h1 {
+        font-size: 3.5rem;
+      }
+
+      :is(h1, h2, h3, h4, h5, h6) {
+        align-self: center;
+        margin-block: 2rem;
+        padding: 0.1rem 1rem;
+        text-align: center;
+        color: var(--blue);
+        transform: skewY(-0.8deg);
+        background-color: var(--white);
+      }
+
+      p {
+        margin-bottom: 1rem;
+      }
+
+      :is(ol, ul) {
+        list-style-position: outside;
+        margin-left: 1rem;
+
+        & + :is(ol, ul):not([start]) {
+          margin-left: 3rem;
+        }
+
+        &:is(ol) > li {
+          margin-bottom: 1rem;
+        }
+
+        &:is(ul) > li {
+          margin-bottom: 0.5rem;
+
+          &:last-of-type {
+            margin-bottom: 1rem;
+          }
+        }
+      }
+    }
+  </style>
+
+  <header>
+    <a href="index.html">
+      <h1>Ad'Help</h1>
+    </a>
+  </header>
+
+  <section id="rules">
+    <h1>AD'HELP - RÈGLES DU JEU</h1>
+
+    <!-- TEXT FROM GDOC EXPORTED TO HTML AND PASTED DIRECTLY HERE -->
+
+    <p><span>Un jeu de carte coop&eacute;ratif et strat&eacute;gique sur le parcours des personnes
+        trans</span></p>
+    <h2 id="h.7wdwfvt4ct5q"><span>MAT&Eacute;RIEL</span></h2>
+    <ul>
+      <li><span>52 cartes de ressources</span></li>
+      <li><span>14 cartes &quot;Situation&quot;</span></li>
+    </ul>
+    <h2 id="h.m6lz6swye8yt"><span>PRINCIPE DU JEU</span></h2>
+    <p><span>Ad&#39;help est un jeu coop&eacute;ratif o&ugrave; vous unissez vos forces pour aider des
+        personnes trans &agrave; construire leur parcours et &agrave; faire face &agrave; diverses situations. Chaque
+        joueur&middot;se </span><span>accompagne une</span><span>&nbsp;personne repr&eacute;sent&eacute;e par
+        une carte &quot;Situation&quot; qui liste les &eacute;l&eacute;ments dont elle a besoin. Ensemble, votre
+        objectif
+        est de valider le plus grand nombre de situations possibles.</span></p>
+    <h2 id="h.nwdexx9bdvzo"><span>MISE EN PLACE</span></h2>
+    <ol start="1">
+      <li><span>M&eacute;langez les cartes &quot;Situation&quot; et distribuez-en une
+          &agrave; chaque joueur&middot;se.</span></li>
+      <li><span>Placez 3 cartes &quot;Situation&quot;</span><sup><a href="#cmnt1"
+            id="cmnt_ref1">[a]</a></sup><span>&nbsp;face visible au centre de la table.</span></li>
+      <li><span>M&eacute;langez les cartes de ressources pour former la pioche.</span>
+      </li>
+      <li><span>Pr&eacute;parez un espace pour le pot commun des situations
+          valid&eacute;es.</span></li>
+      <li><span>Pr&eacute;parez un espace pour la </span><span>d&eacute;fausse</span><sup><a href="#cmnt2"
+            id="cmnt_ref2">[b]</a></sup><span>.</span></li>
+    </ol>
+    <h2 id="h.3hjbkn9lc0g"><span>D&Eacute;ROULEMENT DE LA PARTIE</span></h2>
+    <p><span>&Agrave; chaque tour :</span></p>
+    <ol start="1">
+      <li><span>R&eacute;v&eacute;ler des cartes ressources</span><span>&nbsp;: retournez autant de cartes ressources
+          qu&#39;il y a de joueur&middot;ses. S&rsquo;il
+          n&rsquo;y a plus assez de cartes ressources dans la pioche, prenez la d&eacute;fausse et m&eacute;langez-la
+          pour
+          former la nouvelle pioche.</span></li>
+      <li><span>Choisir une carte</span><span>&nbsp;: chaque joueur&middot;se
+          doit prendre une carte ressource parmi celles r&eacute;v&eacute;l&eacute;es.</span></li>
+      <li><span>R&eacute;solution des effets</span><span>&nbsp;:</span></li>
+    </ol>
+    <ul>
+      <li><span>Si la carte ressource correspond &agrave; un besoin indiqu&eacute; sur
+          votre carte &quot;Situation&quot;, placez-la sur votre carte.</span></li>
+      <li><span>Si elle ne correspond pas, tous&middot;tes les joueur&middot;ses doivent
+          d&eacute;fausser une carte du m&ecirc;me type de leur main.</span></li>
+    </ul>
+    <ol start="4">
+      <li><span>Validation d&#39;une situation</span><span>&nbsp;:</span>
+      </li>
+    </ol>
+    <ul>
+      <li><span>Si tous les besoins d&#39;une carte &quot;Situation&quot; sont
+          satisfaits, celle-ci est valid&eacute;e.</span></li>
+      <li><span>Placez-la dans le pot commun.</span></li>
+      <li><span>Choisissez une nouvelle carte &quot;Situation&quot; parmi les 3 visibles
+          sur la table.</span></li>
+      <li><span>Compl&eacute;tez les cartes &quot;Situation&quot; visibles en piochant
+          dans la pile pour qu&#39;il y en ait toujours 3.</span></li>
+      <li><span>Si une carte &quot;Situation&quot; est valid&eacute;e en m&ecirc;me temps qu&#39;il
+          faut d&eacute;fausser une carte, </span><span>la carte reste</span><sup><a href="#cmnt3"
+            id="cmnt_ref3">[c]</a></sup><span>&nbsp;valide et le&middot;la joueur&middot;se qui l&#39;a
+          valid&eacute;e ne d&eacute;fausse pas de carte.</span></li>
+    </ul>
+    <h2 id="h.5tmfihhl99fi"><span>MODES DE JEU</span></h2>
+    <p><span>Ad&#39;help propose deux modes de jeu :</span></p>
+    <ol start="1">
+      <li><span>Mode chrono</span><span>&nbsp;:</span></li>
+    </ol>
+    <ul>
+      <li><span>Fixez un temps limit&eacute; de 5 minutes.</span></li>
+      <li><span>L&#39;objectif est de valider un maximum de cartes
+          &quot;Situation&quot;.</span></li>
+    </ul>
+    <ol start="2">
+      <li><span>Mode libre</span><span>&nbsp;:</span></li>
+    </ol>
+    <ul>
+      <li><span>Jouez sans limite de temps.</span></li>
+      <li><span>La partie se termine quand les joueur&middot;ses d&eacute;cident de
+          s&#39;arr&ecirc;ter ou quand il n&#39;y a plus de cartes &quot;Situation&quot; disponibles.</span></li>
+    </ul>
+    <h2 id="h.6uedvf1pzm26"><span>OBJECTIF</span></h2>
+    <p><span>L&#39;objectif collectif est de r&eacute;soudre le plus grand nombre possible de
+        situations avant la fin de la partie.</span></p>
+    <h2 id="h.op87zkorym52"><span>MESSAGE DU JEU</span></h2>
+    <p><span>Ad&#39;help met en lumi&egrave;re l&#39;importance de la coop&eacute;ration et de
+        l&#39;entraide au sein de la communaut&eacute; trans. Bien que les personnes trans sont souvent
+        repr&eacute;sent&eacute;es comme isol&eacute;es, ce jeu rappelle l&#39;existence d&#39;une communaut&eacute;
+        solidaire o&ugrave; l&#39;entraide est fondamentale pour surmonter les d&eacute;fis communs.</span></p>
+    <p><span>Les situations pr&eacute;sent&eacute;es dans le jeu sont inspir&eacute;es
+        d&#39;exp&eacute;riences r&eacute;elles, permettant aux joueur&middot;ses de mieux comprendre les parcours et
+        besoins sp&eacute;cifiques des personnes trans.</span></p>
+    <h2 id="h.3m0s6vnu5m85"><span>NOTE SUR LA CR&Eacute;ATION</span></h2>
+    <p><span>Ad&#39;help est n&eacute; pendant les 3 jours de la Transjam 2024 organis&eacute;e par
+        l&#39;association d&#39;autosupport f&eacute;ministe OUTrans, destin&eacute;e aux personnes trans. Les
+        participant&middot;es ont d&eacute;cid&eacute; de continuer &agrave; travailler sur ce projet au-del&agrave; de
+        l&#39;&eacute;v&eacute;nement pour en faire le jeu complet que vous avez entre les mains.</span></p>
+    <div>
+      <p><a href="#cmnt_ref1" id="cmnt1">[a]</a><span>3 autres cartes (celles qu&#39;on a pas
+          distribu&eacute; aux joueur&middot;se)</span></p>
+    </div>
+    <div>
+      <p><a href="#cmnt_ref2" id="cmnt2">[b]</a><span>d&eacute;fausse des ressources</span></p>
+    </div>
+    <div>
+      <p><a href="#cmnt_ref3" id="cmnt3">[c]</a><span>carte Situation ou Ressource ?</span></p>
+    </div>
+  </section>
+</body>
+
+</html>
