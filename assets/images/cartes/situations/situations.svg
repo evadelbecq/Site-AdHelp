@@ -1,0 +1,40 @@
+<svg
+  id="svg1"
+  width="394.23999"
+  height="251.84"
+  viewBox="0 0 394.23999 251.84"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <g>
+  <image
+    href="assets/images/cartes/situations/situation.png"
+    width="361.57556"
+    height="208.32404"
+    preserveAspectRatio="none"
+    id="image3"
+    x="-9.8242264"
+    y="-0.35060543"
+    transform="rotate(-0.25035833)"
+  />
+  <image
+    href="assets/images/cartes/situations/situation.png"
+    width="361.57556"
+    height="208.32404"
+    preserveAspectRatio="none"
+    id="image2"
+    x="11.888429"
+    y="24.249432"
+    transform="rotate(-1.092008)"
+  />
+  <image
+    href="assets/images/cartes/situations/situation.png"
+    width="361.57556"
+    height="208.32404"
+    preserveAspectRatio="none"
+    id="image1-1"
+    x="42.814449"
+    y="44.36272"
+    transform="rotate(-0.19034697)"
+  />
+  </g>
+</svg>

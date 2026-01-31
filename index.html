@@ -14,11 +14,11 @@
             </p>
             <div class="hero-buttons">
                 <div class="button red">
-                    <img src="./assets/images/teddy.png" alt="Ourson en peluche"/>
+                    <img src="./assets/images/cartes/illustrations/réconfort.png" />
                     <a href="#jouer">Jouer</a>
                 </div>
                 <div class="button blue">
-                    <img src="./assets/images/hands.png" alt="Ourson en peluche"/>
+                    <img src="./assets/images/cartes/illustrations/respect.png" />
                     <a href="#feedback">Feedbacks</a>
                 </div>
             </div>
@@ -43,8 +43,8 @@
 
                 <img
                     class="situations"
-                    src="assets/images/situations.png"
-                    alt="Cartes de situations: J'adore ce style vestimentaire ! Quoi... sur moi ? Non... ça ne m'irait pas !"
+                    src="assets/images/cartes/situations/situations.png"
+                    alt="cartes de situations: J'adore ce style vestimentaire ! Quoi... sur moi ? Non... ça ne m'irait pas !"
                     width="300"
                 />
             </div>
@@ -55,7 +55,7 @@
                     title="De 2 à 5 joueur⋅ses"
                 >
                     <img
-                        src="assets/images/player_count.svg"
+                        src="assets/images/pictograms/player_count.svg"
                         alt="De 2 à 5 joueur⋅ses"
                     />
                     <span>2-5</span>
@@ -66,7 +66,7 @@
                     title="Pas de limite d'age"
                 >
                     <img
-                        src="assets/images/player_age.svg"
+                        src="assets/images/pictograms/player_age.svg"
                         alt="Pas de limite d'age"
                     />
                     <span>0+</span>
@@ -77,7 +77,7 @@
                     title="Parties de 20 minutes"
                 >
                     <img
-                        src="assets/images/play_time.svg"
+                        src="assets/images/pictograms/play_time.svg"
                         alt="Parties de 20 minutes"
                     />
                     <span>20min</span>
@@ -89,7 +89,7 @@
             </p>
 
             <div class="button red">
-                <img src="./assets/images/teddy.png" alt="Ourson en peluche"/>
+                <img src="./assets/images/cartes/illustrations/réconfort.png" />
                 <a href="#jouer">Télécharger</a>
             </div>
         </section>
@@ -111,7 +111,7 @@
             </p>
 
             <div class="button blue">
-                <img src="./assets/images/hands.png" />
+                <img src="./assets/images/cartes/illustrations/respect.png" />
                 <a href="https://forms.gle/g878B5wwaLcaFKXS9" target="_blank">Donner son Feedback</a>
             </div>
         </section>
@@ -120,7 +120,7 @@
             <div class="background-1" inert>
                 <script>
                     {
-                        const names = ['accessibilité', 'administration', 'amour', 'changement', 'estime', 'finances', 'presence', 'refuge', 'représentation', 'respect', 'réconfort', 'temps', 'écoute'];
+                        const names = ['accessibilité', 'administratif', 'amour', 'changement', 'estime', 'finances', 'soutien', 'refuge', 'représentation', 'respect', 'réconfort', 'temps', 'écoute'];
                         const background = document.querySelector('#whatsnext .background-1');
 
                         const excludeCenter = number => number < 0.5
@@ -129,7 +129,7 @@
 
                         for (let name of names) {
                             const img = document.createElement('img');
-                            img.src = `assets/images/RAW/${name}.png`;
+                            img.src = `assets/images/cartes/actions/${name}.png`;
                             img.style.setProperty('--x', excludeCenter(Math.random()));
                             img.style.setProperty('--y', excludeCenter(Math.random()));
                             img.style.setProperty('--z', Math.random());
@@ -154,7 +154,7 @@
             <p>Lorem ipsum dolor sit amet... 👀</p>
 
             <div class="button red">
-                <img src="./assets/images/ear.png" />
+                <img src="./assets/images/cartes/illustrations/écoute.png" />
                 <a href="#">S'abonner à la newsletter</a>
             </div>
         </section>

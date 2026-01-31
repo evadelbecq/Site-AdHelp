@@ -214,8 +214,8 @@ section#jouer {
 }
 
 section#feedback {
-    overflow: clip;
     --background-color: #e6effd;
+    overflow: clip;
 
     & > * {
         background-color: var(--background-color);
@@ -246,7 +246,7 @@ section#feedback {
 
     img {
         position: absolute;
-        width: 200px;
+        width: 120px;
         left: calc(var(--x) * 100%);
         top: calc(var(--y) * 100%);
         transform:
@@ -279,7 +279,7 @@ section#feedback {
 }
 
 .background-2 {
-    --background-ratio: 10.932344428;
+    --background-ratio: 12.5;
     --background-height: 250px;
     --background-width: calc(var(--background-height) * var(--background-ratio));
     position: absolute;
@@ -292,13 +292,11 @@ section#feedback {
         position: absolute;
         inset: 0;
         background-image:
-            url('assets/images/resources_2_xs.png'),
-            url('assets/images/resources_2_xs_flipped.png');
+            url('assets/images/background-2.png'),
+            url('assets/images/background-2-flipped.png');
         background-size: auto var(--background-height);
-        background-position-y: 0px, calc(var(--background-height) / 2);
-        animation: play-background-2 infinite 180s linear;
+        animation: play-background-2 infinite 200s linear;
         transform: rotateZ(-2deg) scale(1.1);
-        filter: brightness(0.9) contrast(1.4);
     }
 
     &::after {

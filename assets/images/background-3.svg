@@ -11,25 +11,25 @@
         </g>
     </defs>
     <image
-        href="assets/images/RAW/amour-icon.png"
+        href="assets/images/cartes/illustrations/amour.png"
         width="15"
         x="0"
         y="3"
     />
     <image
-        href="assets/images/RAW/presence-icon.png"
+        href="assets/images/cartes/illustrations/soutien.png"
         width="15"
         x="50"
         y="0"
     />
     <image
-        href="assets/images/RAW/respect-icon.png"
+        href="assets/images/cartes/illustrations/respect.png"
         width="17"
         x="0"
         y="55"
     />
     <image
-        href="assets/images/RAW/réconfort-icon.png"
+        href="assets/images/cartes/illustrations/réconfort.png"
         width="15"
         x="50"
         y="50"
