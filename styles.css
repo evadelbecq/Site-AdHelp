@@ -76,10 +76,32 @@ section {
     flex-flow: column;
     justify-content: flex-start;
     align-items: center;
-    gap: 1rem;
+    gap: 2rem;
     padding-block: 40px;
     padding-inline: max(2rem, min(20rem, 15%));
     text-align: center;
+    overflow: clip;
+
+    &.legible-content > * {
+        background-color: rgb(from var(--background-color) r g b / 0.8);
+        backdrop-filter: blur(5px);
+        border-radius: 10px;
+
+        &:where(h1, h2, h3, h4, h5, h6) {
+            padding: 0px 15px;
+            margin: -0px -15px;
+        }
+
+        &:where(p) {
+            padding: 10px 15px;
+            margin: -10px -15px;
+        }
+
+        &:where(.button) {
+            padding: 15px 15px;
+            margin: -15px -15px;
+        }
+    }
 }
 
 h2 {
@@ -219,25 +241,10 @@ section#jouer {
 
 section#feedback {
     --background-color: #e6effd;
-    overflow: clip;
-
-    & > * {
-        background-color: var(--background-color);
-        border-radius: 5px;
-    }
-
-    p {
-        padding: 10px;
-    }
 }
 
 section#whatsnext {
-    overflow: clip;
-
-    & > * {
-        background-color: var(--beige);
-        border-radius: 5px;
-    }
+    --background-color: var(--beige);
 }
 
 .background-1 {
