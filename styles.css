@@ -257,6 +257,11 @@ section#whatsnext {
     background-color: var(--beige);
     filter: blur(1px);
 
+    @media (prefers-reduced-motion: reduce) {
+        --mouseX: 0 !important;
+        --mouseY: 0 !important;
+    }
+
     &::after {
         content: '';
         position: absolute;
@@ -319,6 +324,11 @@ section#whatsnext {
         background-size: auto var(--background-height);
         animation: play-background-2 infinite 200s linear;
         transform: rotateZ(-2deg) scale(1.1);
+
+        @media (prefers-reduced-motion: reduce) {
+            animation: none;
+            background-position-x: 0px, 1550px;
+        }
     }
 
     &::after {
