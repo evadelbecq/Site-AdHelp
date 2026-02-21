@@ -22,6 +22,11 @@ a {
     src: url('./assets/fonts/Ubuntu/Ubuntu-Regular.ttf');
     size-adjust: 110%;
 }
+@font-face {
+    font-family: 'Slackey';
+    src: url('./assets/fonts/Slackey-Regular.ttf');
+    size-adjust: 110%;
+}
 
 :root{
     --font-title: 'Oswald', sans-serif;
@@ -57,20 +62,24 @@ body {
 
 header {
     padding: 50px 0;
-    background: url(./assets/images/bg_deco.png) no-repeat center top/cover;
+    height: 100dvh;
+    background: url(./assets/images/bg_deco.svg) no-repeat center top/cover;
     display: flex;
     flex-direction: column;
-    place-items: center;
+    justify-content: center;
+    align-items: center;
     background-color: var(--beige) ;
 }
+
 header h1 {
-    font-size: 10rem;
+    font-size: 14rem;
     color: var(--white);
-    filter: drop-shadow(6px 10px 4px rgba(0, 0, 0, 0.9));
+    filter: drop-shadow(6px 10px 6px rgba(0, 0, 0, 0.8));
     text-align: center;
     margin: 0;
 }
 header p {
+    font-size: 1.1rem;
     text-align: center;
     max-width: 50%;
 }
@@ -108,11 +117,34 @@ section {
         }
     }
 }
-
+h1 {
+    font-family: 'Slackey', sans-serif;
+}
 h2 {
     font-size: 2.5rem;
 }
+h3{
+    font-size: 1.6rem;
+}
 
+section#histoire div {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    p {
+        flex: 1 1 auto;
+        max-width: 500px;
+    }
+
+    img {
+        flex: 0 1 auto;
+        min-width: 0;
+        max-width: 100%;
+    }
+}    
 .button {
     --_button-background-color: var(--button-background-color, var(--beige));
     --_button-font-color: var(--button-font-color, var(--black));
