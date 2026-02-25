@@ -96,55 +96,48 @@ section {
     text-align: center;
     overflow: clip;
 
-    &.legible-content > * {
-        background-color: rgb(from var(--background-color) r g b / 0.8);
-        backdrop-filter: blur(5px);
-        border-radius: 10px;
+    &.legible-content {
+        :where(h1, h2, h3, h4, h5, h6) {
+            background-color: rgb(from var(--background-color) r g b / 0.8);
+            backdrop-filter: blur(5px);
+            border-radius: 10px;
 
-        &:where(h1, h2, h3, h4, h5, h6) {
             padding: 0px 15px;
             margin: -0px -15px;
         }
 
-        &:where(p) {
+        :where(p) {
+            background-color: rgb(from var(--background-color) r g b / 0.8);
+            backdrop-filter: blur(5px);
+            border-radius: 10px;
+
             padding: 10px 15px;
             margin: -10px -15px;
         }
 
-        &:where(.button) {
+        :where(.button) {
+            background-color: rgb(from var(--background-color) r g b / 0.8);
+            backdrop-filter: blur(5px);
+            border-radius: 10px;
+
             padding: 15px 15px;
             margin: -15px -15px;
         }
     }
 }
+
 h1 {
     font-family: 'Slackey', sans-serif;
 }
+
 h2 {
     font-size: 2.5rem;
 }
+
 h3{
     font-size: 1.6rem;
 }
 
-section#histoire div {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-
-    p {
-        flex: 1 1 auto;
-        max-width: 500px;
-    }
-
-    img {
-        flex: 0 1 auto;
-        min-width: 0;
-        max-width: 100%;
-    }
-}    
 .button {
     --_button-background-color: var(--button-background-color, var(--beige));
     --_button-font-color: var(--button-font-color, var(--black));
@@ -220,6 +213,30 @@ section#histoire div {
     --button-hover-font-color: var(--white);
 }
 
+section#histoire {
+    --background-color: var(--beige);
+
+    & > .item {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 25px 50px;
+        margin-bottom: 10px;
+
+        p {
+            flex: 1 1 auto;
+            max-width: 500px;
+        }
+
+        img {
+            flex: 0 1 auto;
+            min-width: 0;
+            max-width: 100%;
+        }
+    }
+}
+
 section#jouer {
     color: white;
 
@@ -281,7 +298,7 @@ section#feedback {
 }
 
 section#whatsnext {
-    --background-color: var(--beige);
+    background-color: var(--beige);
 }
 
 .background-1 {
