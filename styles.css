@@ -408,7 +408,7 @@ section#whatsnext {
         inset: -24rem;
         background-image: url('assets/images/background-3.png');
         background-repeat: repeat;
-        background-size: min(25dvw, 150px);
+        background-size: min(25dvw, 200px);
         transform: rotate(-4deg) scale(1.4);
     }
 
