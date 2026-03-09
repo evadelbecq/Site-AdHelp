@@ -222,12 +222,26 @@ header {
             border-image-repeat: repeat;
         }
 
-        h1 {
+        hgroup {
+            display: flex;
+            flex-flow: column;
+            justify-content: center;
+            align-items: center;
+            gap: 0.5rem;
+
             font-size: clamp(2rem, 10dvw, 8rem);
             color: var(--white);
-            filter: drop-shadow(6px 10px 6px rgba(0, 0, 0, 0.8));
             text-align: center;
-            margin: 0;
+
+            h1 {
+                font-size: 1em;
+                filter: drop-shadow(6px 10px 6px #000000cc);
+                margin: 0;
+            }
+        }
+
+        img.outrans {
+            height: max(0.8rem, 0.2em);
         }
 
         p {
